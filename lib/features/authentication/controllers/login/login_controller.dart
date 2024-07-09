@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+import '../../../personal/controllers/user_controller.dart';
+
 class LoginController extends GetxController {
   static LoginController get instance => Get.find();
 
@@ -8,11 +10,7 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   final hidePassword = false.obs;
-  final rememberme = false.obs;
+  final rememberMe = false.obs;
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
   final userController = Get.put(UserController());
-
-
-
-
 }

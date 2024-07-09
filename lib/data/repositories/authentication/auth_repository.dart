@@ -10,48 +10,41 @@ class AuthRepository extends GetxController {
   // Get Authenticated User Data
   User? get authUser => _auth.currentUser;
 
-
   // Called from main.dart on app launch
-
 
   /*------------------------------------------- EMAIL & PASSWORD LOGIN --------------------------------------------*/
   /// [EmailAuthentication] - LOGIN
-  Future<UserCredential> loginWithEmailAndPassword(String email , String password) async{
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
     try {
-      return await _auth.signInWithEmailAndPassword(email: email, password: password);
-    }
-    catch(e)
-    {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } catch (e) {
       throw '';
     }
   }
 
-
   /// [EmailAuthentication] - REGISTER
-  Future<UserCredential> registerWithEmailAndPassword(String email, String password) async
-  {
+  Future<UserCredential> registerWithEmailAndPassword(
+      String email, String password) async {
     try {
-      return await _auth.createUserWithEmailAndPassword(email: email, password: password);
-    }
-    catch(e)
-    {
+      return await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+    } catch (e) {
       throw '';
     }
   }
 
   ///[EmailVerification] -MAIL VERIFICATION
-  Future<void> sendEmailVerification() async
-  {
+  Future<void> sendEmailVerification() async {
     try {
       await _auth.currentUser?.sendEmailVerification();
-    }
-    catch(e)
-    {
+    } catch (e) {
       throw '';
     }
   }
 
-   /// [EmailAuthentication] - FORGET PASSWORD
+  /// [EmailAuthentication] - FORGET PASSWORD
   Future<void> sendPasswordResetEmail(String email) async {
     try {
       await _auth.sendPasswordResetEmail(email: email);
@@ -60,29 +53,24 @@ class AuthRepository extends GetxController {
     }
   }
 
-  /// [ReAuthentication] - RE AUTHENTICATION  
-  Future<void> reAuthenticationEmailAndPassword(String email, String password) async{
-    try{
-      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password)
+  /// [ReAuthentication] - RE AUTHENTICATION
+  Future<void> reAuthenticationEmailAndPassword(
+      String email, String password) async {
+    try {
+      AuthCredential credential =
+          EmailAuthProvider.credential(email: email, password: password);
       await _auth.currentUser!.reauthenticateWithCredential(credential);
-    
-    }
-    catch(e)
-    {
+    } catch (e) {
       throw '';
     }
   }
 
   ///[LogoutUser] -- LOGOUT
-  Future<void> logout() async{
-    try{
+  Future<void> logout() async {
+    try {
       await _auth.signOut();
-      
-    }
-    catch(e)
-    {
+    } catch (e) {
       throw '';
     }
   }
-
 }

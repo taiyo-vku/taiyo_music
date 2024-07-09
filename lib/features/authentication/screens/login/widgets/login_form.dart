@@ -5,7 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_string.dart';
 import '../../../../../utils/validators/validation.dart';
-
+import '../../../controllers/login/login_controller.dart';
 
 class TaiyoLoginForm extends StatelessWidget {
   const TaiyoLoginForm({
@@ -14,9 +14,9 @@ class TaiyoLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final controller = Get.put(LoginController());
+    final controller = Get.put(LoginController());
     return Form(
-     // key: controller.loginFormKey,
+      // key: controller.loginFormKey,
       child: Padding(
         padding:
             const EdgeInsets.symmetric(vertical: TaiyoSizes.spaceBtwSections),
@@ -26,7 +26,7 @@ class TaiyoLoginForm extends StatelessWidget {
             TextFormField(
               validator: (value) =>
                   TaiyoValidator.validateEmptyText('Email', value),
-             // controller: controller.email,
+              // controller: controller.email,
               decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.direct_right),
                   labelText: TaiyoTexts.email),
@@ -76,7 +76,8 @@ class TaiyoLoginForm extends StatelessWidget {
 
                 /// Forget Passowrd
                 TextButton(
-                  onPressed: () => Get.to(() => const ForgetPassword()),
+                  // TODO : FORGET PASSWORD SCREEN
+                  onPressed: () {},
                   child: const Text(TaiyoTexts.forgetPassword),
                 ),
               ],
@@ -89,7 +90,8 @@ class TaiyoLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => controller.signin(),
+                // TODO : LOGIN FORM
+                onPressed: () => controller.loginFormKey,
                 child: const Text(TaiyoTexts.signIn),
               ),
             ),
@@ -101,7 +103,8 @@ class TaiyoLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(() => const SignupScreen()),
+                // TODO : SIGN UP SCREEN
+                onPressed: () {},
                 child: const Text(TaiyoTexts.createAccount),
               ),
             ),
