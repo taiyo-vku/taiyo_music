@@ -10,7 +10,7 @@ class TaiyoImages {
   static const String apple = 'assets/logos/social/apple.png';
 
   // Animation
-  static const String docerAnimation = '';
-  static const String deliveredEmailIllustration = '';
+  static const String docerAnimation = 'assets/images/animations/loading.json';
+  static const String deliveredEmailIllustration = 'verify_email.json';
   static const String successfullyRegisterAnimation = '';
 }

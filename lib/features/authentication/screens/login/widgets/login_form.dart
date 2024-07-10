@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:music_app/features/authentication/screens/signup/sign_up.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_string.dart';
@@ -104,7 +105,7 @@ class TaiyoLoginForm extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton(
                 // TODO : SIGN UP SCREEN
-                onPressed: () {},
+                onPressed: () => Get.to(() => const SignupScreen()),
                 child: const Text(TaiyoTexts.createAccount),
               ),
             ),

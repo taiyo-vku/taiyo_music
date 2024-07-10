@@ -12,8 +12,8 @@ class SignupController extends GetxController {
   static SignupController get instance => Get.find();
 
   /// Variables
-  final hidePassword = false.obs;
-  final privacyPolicy = false.obs;
+  final hidePassword = true.obs;
+  //final privacyPolicy = true.obs;
   final email = TextEditingController();
   final lastName = TextEditingController();
   final username = TextEditingController();
@@ -45,13 +45,13 @@ class SignupController extends GetxController {
       }
 
       // Privacy Policy Check
-      if (!privacyPolicy.value) {
-        TaiyoLoaders.warningSnackBar(
-            title: 'Accept Privacy Policy',
-            mesage:
-                'In order to create account, you must have t read and accept the Privacy Policy & Term of Use.');
-        return;
-      }
+      // if (!privacyPolicy.value) {
+      //   TaiyoLoaders.warningSnackBar(
+      //       title: 'Accept Privacy Policy',
+      //       mesage:
+      //           'In order to create account, you must have t read and accept the Privacy Policy & Term of Use.');
+      //   return;
+      // }
       // Register uer in the Firebase Authentication & Sava user in the Firebase
       final userCredentials = await AuthRepository.instance
           .registerWithEmailAndPassword(

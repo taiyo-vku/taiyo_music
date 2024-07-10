@@ -9,7 +9,7 @@ class LoginController extends GetxController {
   // Variables
   final email = TextEditingController();
   final password = TextEditingController();
-  final hidePassword = false.obs;
+  final hidePassword = true.obs;
   final rememberMe = false.obs;
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
   final userController = Get.put(UserController());
