@@ -52,9 +52,6 @@ class TaiyoSocialButton extends StatelessWidget {
               onPressed: () {},
             ),
           ),
-        const SizedBox(
-          width: TaiyoSizes.spaceBtwItems,
-        ),
         // TODO : APPLE LOGIN
 
         if (TaiyoDeviceUtils.isIOS())

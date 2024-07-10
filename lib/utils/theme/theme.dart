@@ -4,6 +4,7 @@ import 'package:music_app/utils/theme/customs/check_box.dart';
 import 'package:music_app/utils/theme/customs/elevated_button_theme.dart';
 import 'package:music_app/utils/theme/customs/outline_button_theme.dart';
 
+import 'customs/appbar_theme.dart';
 import 'customs/text_field_theme.dart';
 
 class TaiyoTheme {
@@ -15,6 +16,7 @@ class TaiyoTheme {
     fontFamily: 'Poppins',
     brightness: Brightness.light,
     primaryColor: Colors.lightBlue,
+    appBarTheme: TaiyoAppBarTheme.lightAppBarTheme,
     scaffoldBackgroundColor: TaiyoColors.white,
     checkboxTheme: TaiyoCheckboxTheme.lightCheckboxTheme,
     elevatedButtonTheme: TaiyoElevatedButtonTheme.lightElevatedButtonTheme,
@@ -26,6 +28,7 @@ class TaiyoTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     primaryColor: Colors.lightBlue,
+    appBarTheme: TaiyoAppBarTheme.darkAppBarTheme,
     scaffoldBackgroundColor: TaiyoColors.dark,
     checkboxTheme: TaiyoCheckboxTheme.darkCheckboxTheme,
     elevatedButtonTheme: TaiyoElevatedButtonTheme.darkElevatedButtonTheme,

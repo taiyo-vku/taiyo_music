@@ -15,6 +15,7 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Taiyo Music",
+
       themeMode: ThemeMode.system,
       theme: TaiyoTheme.lightTheme,
       darkTheme: TaiyoTheme.darkTheme,
