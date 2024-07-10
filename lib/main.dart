@@ -14,8 +14,8 @@ Future<void> main() async {
       WidgetsFlutterBinding.ensureInitialized();
 
   // Todo Initalize Firebase
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
-  //     .then((FirebaseApp value) => Get.put(AuthRepository()));
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then((FirebaseApp value) => Get.put(AuthRepository()));
   try {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,

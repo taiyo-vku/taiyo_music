@@ -79,6 +79,7 @@ flutter:
 
   assets:
     - assets/images/animations/
+    - assets/images/user/
     - assets/logos/
     - assets/logos/app/
     - assets/logos/social/

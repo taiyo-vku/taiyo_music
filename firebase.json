@@ -1,1 +1,1 @@
-{"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"taiyomusic-d2a08","configurations":{"ios":"1:490381476872:ios:e93a6970a4bed58b037dbd"}}}}}}
+{"flutter":{"platforms":{"android":{"default":{"projectId":"taiyomusic-d2a08","appId":"1:490381476872:android:a6bfb6a6b8b8d57b037dbd","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"taiyomusic-d2a08","configurations":{"android":"1:490381476872:android:a6bfb6a6b8b8d57b037dbd","ios":"1:490381476872:ios:e93a6970a4bed58b037dbd"}}}}}}

@@ -24,10 +24,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
@@ -51,6 +48,14 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCuayL2yVx2oO94S3X-OvSnec_Vm1pk2Rg',
+    appId: '1:490381476872:android:a6bfb6a6b8b8d57b037dbd',
+    messagingSenderId: '490381476872',
+    projectId: 'taiyomusic-d2a08',
+    storageBucket: 'taiyomusic-d2a08.appspot.com',
+  );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBGG0cyxpF74caSkyeG6eQW-n5T_FxruEs',

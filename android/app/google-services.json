@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490381476872",
+    "project_id": "taiyomusic-d2a08",
+    "storage_bucket": "taiyomusic-d2a08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490381476872:android:a6bfb6a6b8b8d57b037dbd",
+        "android_client_info": {
+          "package_name": "music.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuayL2yVx2oO94S3X-OvSnec_Vm1pk2Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

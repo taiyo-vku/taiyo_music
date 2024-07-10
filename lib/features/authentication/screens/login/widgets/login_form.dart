@@ -16,7 +16,7 @@ class TaiyoLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
     return Form(
-      // key: controller.loginFormKey,
+      key: controller.loginFormKey,
       child: Padding(
         padding:
             const EdgeInsets.symmetric(vertical: TaiyoSizes.spaceBtwSections),

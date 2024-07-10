@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:music_app/features/authentication/screens/login/login.dart';
+import 'package:music_app/utils/constants/text_string.dart';
 
 class AuthRepository extends GetxController {
   static AuthRepository get instance => Get.find();
@@ -36,7 +37,7 @@ class AuthRepository extends GetxController {
       return await _auth.signInWithEmailAndPassword(
           email: email, password: password);
     } catch (e) {
-      throw '';
+      throw TaiyoTexts.error;
     }
   }
 
@@ -47,7 +48,7 @@ class AuthRepository extends GetxController {
       return await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
     } catch (e) {
-      throw '';
+      throw TaiyoTexts.error;
     }
   }
 
@@ -56,7 +57,7 @@ class AuthRepository extends GetxController {
     try {
       await _auth.currentUser?.sendEmailVerification();
     } catch (e) {
-      throw '';
+      throw TaiyoTexts.error;
     }
   }
 
@@ -65,7 +66,7 @@ class AuthRepository extends GetxController {
     try {
       await _auth.sendPasswordResetEmail(email: email);
     } catch (e) {
-      throw 'Something went wrong. Please try again.';
+      throw TaiyoTexts.error;
     }
   }
 

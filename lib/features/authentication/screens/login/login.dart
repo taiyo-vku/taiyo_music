@@ -32,6 +32,8 @@ class LoginScreen extends StatelessWidget {
 
               /// Footer
               const TaiyoSocialButton(),
+
+              
             ],
           ),
         ),

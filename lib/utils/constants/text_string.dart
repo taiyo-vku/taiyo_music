@@ -56,4 +56,7 @@ class TaiyoTexts {
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend Email in";
   static const String logout = 'Logout';
+
+  // Error
+  static const String error ='Something went wrong. Please try again';
 }
