@@ -1,8 +1,7 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'binding/general_binding.dart';
 import 'utils/constants/colors.dart';
 import 'utils/theme/theme.dart';
 
@@ -17,7 +16,8 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TaiyoTheme.lightTheme,
       darkTheme: TaiyoTheme.darkTheme,
-      //initialBinding: GeneralBindings(),
+      initialBinding: GeneralBinding(),
+
       //getPages: AppRoutes.pages,
       home: const Scaffold(
         backgroundColor: TaiyoColors.primary,

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:music_app/features/authentication/screens/login/login.dart';
 
 class AuthRepository extends GetxController {
   static AuthRepository get instance => Get.find();
@@ -11,6 +12,21 @@ class AuthRepository extends GetxController {
   User? get authUser => _auth.currentUser;
 
   // Called from main.dart on app launch
+  @override
+  void onReady() {
+    screenRedirect();
+  }
+
+  screenRedirect() {
+    // final user = _auth.currentUser;
+    // if (user != null) {
+    //   if (user.emailVerified) {}
+    // } else {
+    //   Get.offAll(() => const LoginScreen());
+    // }
+
+    Get.offAll(() => const LoginScreen());
+  }
 
   /*------------------------------------------- EMAIL & PASSWORD LOGIN --------------------------------------------*/
   /// [EmailAuthentication] - LOGIN
